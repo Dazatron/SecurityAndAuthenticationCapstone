@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="../SecurityAndAuthenticationCapstone.Test/SecurityAndAuthenticationCapstone.Test.csproj" />
+  <Project Path="SecurityAndAuthenticationCapstone.csproj" />
+</Solution>

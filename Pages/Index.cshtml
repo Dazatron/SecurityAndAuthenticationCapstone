@@ -1,0 +1,46 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<h1>SafeVault</h1>
+
+@if (Model.IsLoggedIn)
+{
+    <p>Welcome, @Model.Username!</p>
+
+    <p>Your role: <strong>@Model.Role</strong></p>
+
+    <a href="/Logout">
+        <button>Logout</button>
+    </a>
+
+    <br /><br />
+
+    <a href="/Dashboard">
+        <button>User Dashboard</button>
+    </a>
+
+    @if (Model.Role == "admin")
+    {
+        <br /><br />
+        <a href="/Admin">
+            <button>Admin Dashboard</button>
+        </a>
+    }
+}
+else
+{
+    <p>You are not logged in.</p>
+
+    <a href="/Login">
+        <button>Login</button>
+    </a>
+
+    <br /><br />
+
+    <a href="/Register">
+        <button>Register</button>
+    </a>
+}

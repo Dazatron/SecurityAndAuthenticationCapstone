@@ -1,0 +1,28 @@
+﻿@page
+@model RegisterModel
+
+<h2>Register</h2>
+
+<form method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <label>Username</label>
+    <input asp-for="Username" />
+    <span asp-validation-for="Username" class="text-danger"></span>
+
+    <label>Email</label>
+    <input asp-for="Email" />
+    <span asp-validation-for="Email" class="text-danger"></span>
+
+    <label>Password</label>
+    <input asp-for="Password" type="password" />
+    <span asp-validation-for="Password" class="text-danger"></span>
+
+    <label>Role</label>
+    <select asp-for="Role">
+        <option value="user">User</option>
+        <option value="admin">Admin</option>
+    </select>
+
+    <button type="submit">Register</button>
+</form>
